@@ -2,14 +2,21 @@
 ?>
 
     <main>
-<?php
-    foreach ($product as $row):?>
     <header>
-            <h1><?=$row['title']?></h1>
+            <h1><?=$product['title']?></h1>
     </header>
 
     <article>
-        <p><?=$row['descritpion']?></p> <br> <?=$finalPrice?>
+        <p><?=$product['description']?></p> <br> <p>Prix = <?=$finalPrice?>€</p>
     </article>
-     <?php endforeach;?>
 </main>
+
+<form action="/index.php?action=cart" method="POST">
+    <div>
+        <label for="quantity">Quantité :</label>
+        <input name="quantity" type="number" min="0">
+    </div>
+    <div>
+        <button type="submit" name="submit">Ajouter au panier</button>
+    </div>
+</form>
