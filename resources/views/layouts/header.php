@@ -9,7 +9,11 @@
     <title>BookDev</title>
 </head>
 <body>
-
 <header>
     <h2> La boutique du Dev </h2>
 </header>
+<nav class="menu">
+    <ul>
+        <li><a href="/">Accueil</a></li>
+    </ul>
+</nav>
