@@ -4,10 +4,12 @@
             <?php foreach ($products as $product): ?>
                 <article class="produit">
                     <header>
-                        <h3> <?= $product['title'] ?> </h3>
+                        <a href="/?action=product&id=<?= $product['id'] ?>"><h3><?= $product['title'] ?></h3></a>
                     </header>
-                    <img src="resources/img/<?= $product['id'] ?>.jpg" />
-                    <p> Description du produit : <?= $product['description'] ?></p>
+                    <a href="/?action=product&id=<?= $product['id'] ?>"><img
+                                src="resources/img/<?= $product['id'] ?>.jpg" alt="<?= $product['title'] ?>"
+                                height="150"/></a>
+                    <p><?= $product['description'] ?></p>
                     <footer>
                         <em>Prix HT : <?= $product['price_ht'] ?> €/HT</em> | <em>Poids : <?= $product['weight'] ?>
                             g</em>
