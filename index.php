@@ -10,6 +10,6 @@ if (filter_has_var(INPUT_GET,'action')) {
         $route = $routes['404'];
     }
 }else{
-    $route = $routes['product'];
+    $route = $routes['home'];
 }
 require $route;
