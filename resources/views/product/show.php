@@ -7,6 +7,7 @@
     </header>
 
     <article>
+        <img src="resources/img/<?=$id?>.jpg"
         <p><?=$product['description']?></p> <br> <p>Prix = <?=$finalPrice?>€</p>
     </article>
 </main>
