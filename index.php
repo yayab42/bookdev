@@ -7,6 +7,7 @@ if (filter_has_var(INPUT_GET,'action')) {
     if(isset($routes[$action])){
         $route = $routes[$action];
     }else{
+        http_response_code(404);
         $route = $routes['404'];
     }
 }else{
