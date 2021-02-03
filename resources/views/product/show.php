@@ -1,23 +1,24 @@
-<?php
-?>
-
+<?php require 'resources/views/layouts/header.php' ?>
     <main>
-    <header>
-            <h1><?=$product['title']?></h1>
-    </header>
+        <article>
+            <header>
+                <h3><?= $product['title'] ?></h3>
+            </header>
+            <img src="resources/img/<?= $id ?>.jpg" alt="<?= $product['title'] ?>" height="150"/>
+            <p><?= $product['description'] ?></p>
+            <footer>
+                <em>Prix : <?= $finalPrice ?>€/TTC</em>
+            </footer>
+        </article>
 
-    <article>
-        <img src="resources/img/<?=$id?>.jpg"
-        <p><?=$product['description']?></p> <br> <p>Prix = <?=$finalPrice?>€</p>
-    </article>
-</main>
-
-<form action="/index.php?action=cart" method="POST">
-    <div>
-        <label for="quantity">Quantité :</label>
-        <input name="quantity" type="number" min="0">
-    </div>
-    <div>
-        <button type="submit" name="submit">Ajouter au panier</button>
-    </div>
-</form>
+        <form action="/index.php?action=cart" method="POST">
+            <div>
+                <label for="quantity">Quantité :</label>
+                <input id="quantity" name="quantity" type="number" min="0">
+            </div>
+            <div>
+                <button type="submit" name="submit">Ajouter au panier</button>
+            </div>
+        </form>
+    </main>
+<?php require 'resources/views/layouts/footer.php' ?>
