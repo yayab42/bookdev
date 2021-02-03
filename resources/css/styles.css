@@ -10,3 +10,12 @@
      margin: 10px;
      flex: 1 400px;
  }
+
+ .menu>ul {
+     list-style: none;
+ }
+
+ footer>p {
+     margin: 0 auto;
+     text-align: center;
+ }
