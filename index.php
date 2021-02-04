@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Add Bootstrap
 require_once 'bootstrap/app.php';
 

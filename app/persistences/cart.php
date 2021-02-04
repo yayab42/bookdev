@@ -10,12 +10,11 @@ function fakeCart() {
 
 // Fonction qui initialise le panier en fonction de la session
 function initCart() {
-    if(!isset($_SESSION)) {
+    if(!isset($_SESSION['cart'])) {
         $_SESSION['cart']= [];
         fakeCart();
     }
     return $_SESSION['cart'];
-
 }
 
 function totalCart($products, $quantities) :array{
@@ -28,7 +27,6 @@ function totalCart($products, $quantities) :array{
     $productCount = array_sum($quantities);
 
     return [$totalTtcPrice, $productCount];
-
 }
 
 

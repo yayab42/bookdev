@@ -9,5 +9,6 @@ foreach ($cart as $id => $quantity) {
     $quantities[$id] = $quantity;
 }
 $totalAndQuantities = totalCart($products, $quantities);
+$_SESSION['totalAndQuantities'] = $totalAndQuantities;
 
 require 'resources/views/cart/index.php';

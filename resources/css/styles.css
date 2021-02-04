@@ -11,8 +11,20 @@
      flex: 1 400px;
  }
 
- .menu>ul {
+ .menu ul {
+     display: flex;
+     justify-content: space-around;
+     flex-wrap: nowrap;
      list-style: none;
+ }
+
+ .cart {
+     border: 2px solid black;
+     padding: 10px;
+ }
+
+ .cart h3 {
+     margin: 0;
  }
 
  footer>p {
@@ -20,15 +32,6 @@
      text-align: center;
  }
 
- .ligne_commande {
-     display: flex;
-     justify-content: space-around;
-     flex-wrap: nowrap;
-     border: 2px solid black;
-     margin-top: 5px;
-     margin-bottom: 5px;
- }
-
- .command_button {
-     text-align: right;
+ section table {
+     width: 100%;
  }
