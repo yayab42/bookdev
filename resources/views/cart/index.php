@@ -2,20 +2,22 @@
     <main>
         <section>
             <h1>Panier</h1>
-            <form action="" method="post">
+            <form action="/?action=command" method="post">
                 <?php foreach ($products as $id => $product): ?>
-                <?php $price_row_ttc = priceWithVAT($product['price_ht'], $product['vat']) ?>
-                    <div>
+                    <?php $price_row_ttc = priceWithVAT($product['price_ht'], $product['vat']) ?>
+                    <div class="ligne_commande">
                         <p><img src="resources/img/<?= $id ?>.jpg" alt="<?= $product['title'] ?>"
-                                height="80"/> <?= $product['title'] ?> | prix unitaire
-                            : <?= $price_row_ttc ?> €/TTC | Quantité <input
-                                    type="number" value="<?= $quantities[$id] ?>"/> | Total :  <?= $price_row_ttc * $quantities[$id] ?> €/TTC</p>
+                                height="80"/></p>
+                        <p><?= $product['title'] ?><p>
+                        <p>prix unitaire <?= $price_row_ttc ?> €/TTC</p>
+                        <p>
+                            <label for="quantity_product_<?= $id ?>">Quantité</label>
+                            <input id="quantity_product_<?= $id ?>" name="quantity_product_<?= $id ?>" type="number" value="<?= $quantities[$id] ?>"/>
+                        </p>
+                        <p>Total : <?= $price_row_ttc * $quantities[$id] ?> €/TTC</p>
                     </div>
                 <?php endforeach; ?>
-                <p>Total : <?= $totalAndQuantities[0] ?> €/TTC</p>
-                <div>
-                    <input type="submit" value="Valider le panier"/>
-                </div>
+                <div class="command_button">Total : <?= $totalAndQuantities[0] ?> €/TTC | <input type="submit" value="Valider le panier"/></div>
             </form>
         </section>
     </main>
