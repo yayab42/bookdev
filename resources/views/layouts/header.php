@@ -22,7 +22,7 @@
                 </header>
                 <p><?= $_SESSION['totalAndQuantities'][1] ?> produits dans le panier</p>
                 <footer>
-                    <em>Prix total du panier : <?= $_SESSION['totalAndQuantities'][0] ?> €/TTC</em>
+                    <em>Prix total du panier : <?= number_format($_SESSION['totalAndQuantities'][0],2,'.', ' ') ?> €/TTC</em>
                 </footer>
             </li>
         <?php endif; ?>

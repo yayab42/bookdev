@@ -22,12 +22,12 @@
                             <td><img src="resources/img/<?= $id ?>.jpg" alt="<?= $product['title'] ?>"
                                      height="80"/></td>
                             <td><?= $product['title'] ?></td>
-                            <td><?= $price_row_ttc ?> €/TTC</td>
+                            <td><?= number_format($price_row_ttc,2,'.', ' ') ?> €</td>
                             <td>
                                 <input id="quantity_product_<?= $id ?>" name="quantity_product_<?= $id ?>" type="number"
                                        value="<?= $quantities[$id] ?>"/>
                             </td>
-                            <td><?= $price_row_ttc * $quantities[$id] ?> €/TTC</td>
+                            <td><?= number_format($price_row_ttc * $quantities[$id], 2, '.', ' ') ?> €</td>
                         </tr>
                         <tr>
                             <td colspan="5">
@@ -37,7 +37,7 @@
                     <?php endforeach; ?>
                     <tr>
                         <td colspan="4"></td>
-                        <td>Total : <?= $totalAndQuantities[0] ?> €/TTC</td>
+                        <td>Total : <?= number_format($totalAndQuantities[0],2,'.', ' ') ?> €/TTC</td>
                     </tr>
                     <tr>
                         <td colspan="4"></td>

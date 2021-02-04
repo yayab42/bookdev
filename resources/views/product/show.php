@@ -7,7 +7,7 @@
             <img src="resources/img/<?= $id ?>.jpg" alt="<?= $product['title'] ?>" height="150"/>
             <p><?= $product['description'] ?></p>
             <footer>
-                <em>Prix : <?= $finalPrice ?>€/TTC</em>
+                <em>Prix : <?= number_format($finalPrice,2,'.', ' ') ?> €/TTC</em>
             </footer>
         </article>
 

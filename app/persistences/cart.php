@@ -17,7 +17,7 @@ function initCart() {
     return $_SESSION['cart'];
 }
 
-function totalCart($products, $quantities) :array{
+function totalCart($products, $quantities) : array{
     $totalTtcPrice = 0;
     foreach ($products as $id => $product){
         $ttcPrice = 0;
@@ -28,5 +28,3 @@ function totalCart($products, $quantities) :array{
 
     return [$totalTtcPrice, $productCount];
 }
-
-
