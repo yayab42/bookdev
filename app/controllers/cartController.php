@@ -8,6 +8,6 @@ foreach ($cart as $id => $quantity) {
     $products[$id] = getProduct($pdo, $id);
     $quantities[$id] = $quantity;
 }
-debug(totalCart($products, $quantities));
+$totalAndQuantities = totalCart($products, $quantities);
 
 require 'resources/views/cart/index.php';
