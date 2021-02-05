@@ -13,9 +13,11 @@
 
         <form action="/index.php?action=cart" method="POST">
             <div>
+                <input type="hidden" name="id" value="<?= $product['id']?>">
+            </div>
+            <div>
                 <label for="quantity">Quantité :</label>
-                <input id="quantity" name="quantity" type="number" min="0">
-
+                <input id="quantity" name="quantity" type="number" min="1" value="1">
             </div>
             
             <div>
