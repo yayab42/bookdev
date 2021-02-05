@@ -53,7 +53,7 @@
         </table>
     </form>
 <?php else: ?>
-<p>Il n'y a rien dans le panier</p>
+<p>Il n'y a rien dans le panier <br> Prière d'acheter</p>
 <?php endif; ?>
     </section>
     </main>

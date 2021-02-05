@@ -26,9 +26,10 @@ if (!empty($_SESSION['cart'])) {
         $products[$id] = getProduct($pdo, $id);
         $quantities[$id] = $quantity;
     }
-
     $totalAndQuantities = totalCart($products, $quantities);
     $_SESSION['totalAndQuantities'] = $totalAndQuantities;
+}else{
+    $_SESSION['totalAndQuantities'][0]=0;
 }
 
 require 'resources/views/cart/index.php';
