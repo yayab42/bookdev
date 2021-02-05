@@ -1,12 +1,14 @@
 <?php
 require_once 'app/helpers/priceWithVAT.php';
-function addProductCart(int $productId, int $quantities) : void
+function addProductCart(int $productId, int $quantities) : array
 {
     if (isset($_SESSION['cart'][$productId])) {
         $_SESSION['cart'][$productId] = $_SESSION['cart'][$productId] + $quantities;
     } else {
         $_SESSION['cart'][$productId]=$quantities;
     }
+
+    return $_SESSION['cart'];
 }
 
 function initCart() : array
