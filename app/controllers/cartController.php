@@ -8,6 +8,8 @@ foreach ($cart as $id => $quantity) {
     $products[$id] = getProduct($pdo, $id);
     $quantities[$id] = $quantity;
 }
+
+
 $totalAndQuantities = totalCart($products, $quantities);
 $_SESSION['totalAndQuantities'] = $totalAndQuantities;
 
