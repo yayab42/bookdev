@@ -14,13 +14,21 @@ if (filter_has_var(INPUT_POST, 'quantity')) {
     $cart = addProductCart($product_id, $qty);
 }
 
-// Populer les tableaux pour la vue et le calcul des prix avec les produits et quantités
-foreach ($cart as $id => $quantity) {
-    $products[$id] = getProduct($pdo, $id);
-    $quantities[$id] = $quantity;
+// Update des quantités
+if (filter_has_var(INPUT_POST, 'upload')) {
+    $datas = filter_input_array(INPUT_POST, FILTER_SANITIZE_NUMBER_INT);
+    $cart = updateProductCart($datas);
 }
 
-$totalAndQuantities = totalCart($products, $quantities);
-$_SESSION['totalAndQuantities'] = $totalAndQuantities;
+if (!empty($_SESSION['cart'])) {
+// Populer les tableaux pour la vue et le calcul des prix avec les produits et quantités
+    foreach ($cart as $id => $quantity) {
+        $products[$id] = getProduct($pdo, $id);
+        $quantities[$id] = $quantity;
+    }
+
+    $totalAndQuantities = totalCart($products, $quantities);
+    $_SESSION['totalAndQuantities'] = $totalAndQuantities;
+}
 
 require 'resources/views/cart/index.php';

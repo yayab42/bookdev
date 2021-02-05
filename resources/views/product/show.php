@@ -21,7 +21,7 @@
             </div>
             
             <div>
-                <button type="submit" name="submit">Ajouter au panier</button>
+                <button type="submit">Ajouter au panier</button>
             </div>
         </form>
     </main>

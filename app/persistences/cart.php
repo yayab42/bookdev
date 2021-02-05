@@ -1,17 +1,17 @@
 <?php
 require_once 'app/helpers/priceWithVAT.php';
-function addProductCart(int $productId, int $quantities) : array
+function addProductCart(int $productId, int $quantities): array
 {
     if (isset($_SESSION['cart'][$productId])) {
         $_SESSION['cart'][$productId] = $_SESSION['cart'][$productId] + $quantities;
     } else {
-        $_SESSION['cart'][$productId]=$quantities;
+        $_SESSION['cart'][$productId] = $quantities;
     }
 
     return $_SESSION['cart'];
 }
 
-function initCart() : array
+function initCart(): array
 {
     if (!isset($_SESSION['cart'])) {
         $_SESSION['cart'] = [];
@@ -32,4 +32,16 @@ function totalCart($products, $quantities): array
     return [$totalTtcPrice, $productCount];
 }
 
-
+function updateProductCart(array $datas): array
+{
+    foreach ($_SESSION['cart'] as $id => $quantity) {
+        if ($id != 'upload') {
+            if ($datas[$id] == 0) {
+                unset($_SESSION['cart'][$id]);
+            } else {
+                $_SESSION['cart'][$id] = $datas[$id];
+            }
+        }
+    }
+    return $_SESSION['cart'];
+}
