@@ -1,6 +1,6 @@
 <?php
 require_once 'app/helpers/priceWithVAT.php';
-function addProductCart(int $productId, int $quantities)
+function addProductCart(int $productId, int $quantities) : void
 {
     if (isset($_SESSION['cart'][$productId])) {
         $_SESSION['cart'][$productId] = $_SESSION['cart'][$productId] + $quantities;
@@ -9,14 +9,11 @@ function addProductCart(int $productId, int $quantities)
     }
 }
 
-
-
-function initCart(int $productId, int $quantities) : array
+function initCart() : array
 {
     if (!isset($_SESSION['cart'])) {
         $_SESSION['cart'] = [];
     }
-    addProductCart($productId, $quantities);
     return $_SESSION['cart'];
 }
 
