@@ -16,20 +16,26 @@
     <ul>
         <li><a href="/">Accueil</a></li>
         <?php if (isset($_SESSION['cart'])): ?>
+            <li class="cart">
+                <header>
+                    <h3><a href="?action=cart">Panier</a></h3>
+                </header>
+                <?php if ($_SESSION['totalAndQuantities'][0] > 0): ?>
+                    <p><?= $_SESSION['totalAndQuantities'][1] ?> produits dans le panier</p>
+                    <footer>
+                        <em> Prix total du panier : <?= number_format($_SESSION['totalAndQuantities'][0],
+                                2, '.', ' ') ?> €/TTC</em>
+                    </footer>
+                <?php else: ?>
+                    <p>Panier vide : Prière d'acheter</p>
+                <?php endif; ?>
+            </li>
+        <?php else: ?>
         <li class="cart">
             <header>
                 <h3><a href="?action=cart">Panier</a></h3>
             </header>
-            <?php if ($_SESSION['totalAndQuantities'][0] > 0): ?>
-            <p><?= $_SESSION['totalAndQuantities'][1] ?> produits dans le panier</p>
-            <footer>
-                <em> Prix total du panier : <?= number_format($_SESSION['totalAndQuantities'][0],
-                        2, '.', ' ') ?> €/TTC</em>
-            </footer>
-            <?php else: ?>
-                <p>Panier vide : Prière d'acheter</p>
-            <?php endif; ?>
-
+            <p>Panier vide : Prière d'acheter</p>
         </li>
         <?php endif; ?>
     </ul>
