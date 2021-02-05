@@ -15,6 +15,7 @@
             <div>
                 <label for="quantity">Quantité :</label>
                 <input id="quantity" name="quantity" type="number" min="0">
+
             </div>
             
             <div>

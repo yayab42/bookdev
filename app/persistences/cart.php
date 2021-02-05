@@ -1,16 +1,5 @@
 <?php
 require_once 'app/helpers/priceWithVAT.php';
-
-//// Fonction qui peuple le panier
-//function fakeCart() {
-//    $_SESSION['cart'][5] = 3;
-//    $_SESSION['cart'][3] = 1;
-//    $_SESSION['cart'][1] = 2;
-//}
-
-// Fonction qui initialise le panier en fonction de la session
-
-
 function addProductCart(int $productId, int $quantities)
 {
     if (isset($_SESSION['cart'][$productId])) {
