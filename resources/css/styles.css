@@ -35,3 +35,13 @@
  section table {
      width: 100%;
  }
+
+ .button {
+     width: 10px;
+     height: 10px;
+     padding: 5px;
+     text-align: center;
+     font-weight: bold;
+     text-decoration: none;
+     color: black;
+ }
