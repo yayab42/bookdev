@@ -31,12 +31,12 @@
                 <?php endif; ?>
             </li>
         <?php else: ?>
-        <li class="cart">
-            <header>
-                <h3><a href="?action=cart">Panier</a></h3>
-            </header>
-            <p>Panier vide : Prière d'acheter</p>
-        </li>
+            <li class="cart">
+                <header>
+                    <h3><a href="?action=cart">Panier</a></h3>
+                </header>
+                <p>Panier vide : Prière d'acheter</p>
+            </li>
         <?php endif; ?>
     </ul>
 </nav>

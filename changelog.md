@@ -8,6 +8,4 @@ All notable changes to this project will be documented in this file
 
 Added
 
-Add gitignore
-Add changelog
-Add readme
+Add gitignore Add changelog Add readme

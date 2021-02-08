@@ -1,6 +1,7 @@
 <?php
 
 
-function debug($var) {
+function debug($var)
+{
     highlight_string("<?php\n" . var_export($var, true) . ";\n?>");
 }

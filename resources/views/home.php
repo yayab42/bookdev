@@ -11,7 +11,8 @@
                                 height="150"/></a>
                     <p><?= $product['description'] ?></p>
                     <footer>
-                        <em>Prix HT : <?= number_format($product['price_ht'],2,'.',' ') ?> €/HT</em> | <em>Poids : <?= $product['weight'] ?>
+                        <em>Prix HT : <?= number_format($product['price_ht'], 2, '.', ' ') ?> €/HT</em> | <em>Poids
+                            : <?= $product['weight'] ?>
                             g</em>
                         | <em>Quantité en stock : <?= $product['stock'] ?></em>
                     </footer>

@@ -7,9 +7,9 @@ function getAllProducts(PDO $pdo): array
     return $products;
 }
 
-function getProduct(PDO $pdo, int $productId) : array
+function getProduct(PDO $pdo, int $productId): array
 {
-    $result = $pdo -> query("SELECT id, title, price_ht, vat, description
+    $result = $pdo->query("SELECT id, title, price_ht, vat, description
 FROM products
 WHERE products.id=$productId");
     return $result->fetch(PDO::FETCH_ASSOC);

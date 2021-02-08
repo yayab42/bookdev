@@ -34,7 +34,7 @@ if (!empty($_SESSION['cart'])) {
     }
     $totalAndQuantities = totalCart($products, $quantities);
     $_SESSION['totalAndQuantities'] = $totalAndQuantities;
-}else{
+} else {
     $_SESSION['totalAndQuantities'][0] = 0;
 }
 
