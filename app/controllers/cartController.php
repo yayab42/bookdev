@@ -23,8 +23,7 @@ if (filter_has_var(INPUT_POST, 'upload')) {
 // Suppression d'un produit
 if (filter_has_var(INPUT_GET, 'delete')) {
     $delete_product = filter_input(INPUT_GET, 'delete', FILTER_SANITIZE_NUMBER_INT);
-    deleteProductCart($delete_product);
-
+    $cart = deleteProductCart($delete_product);
 }
 
 if (!empty($_SESSION['cart'])) {
