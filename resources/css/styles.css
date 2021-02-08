@@ -1,3 +1,54 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Varela Round', sans-serif;
+}
+
+#header_general {
+    background-color: #333;
+    color : white;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    display : flex;
+    align-items: center;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 24px;
+    margin-left: 10px;
+    width: 50%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 50%;
+    font-family: 'Lato', sans-serif;
+}
+
+nav a {
+    color: white;
+    text-decoration : none;
+    align-items: center;
+}
+
+nav .accueil a:hover {
+    background-color: dimgray;
+}
+
+.accueil a {
+    display : flex;
+    align-content: center;
+    padding: 30px 10px 30px 10px;
+}
+
+body {
+    margin: 0px;
+}
 .content {
     display: flex;
     justify-content: space-around;
@@ -5,13 +56,42 @@
 }
 
 .produit {
-    border: 2px solid black;
+    border: 1px solid black;
+    background-color: #333333;
+    color: white;
     padding: 10px;
     margin: 10px;
     flex: 1 400px;
 }
 
-.menu ul {
+.product_content {
+    display : flex;
+    justify-content: center;
+}
+
+.produit footer {
+    margin-top: 15px;
+}
+
+.produit img {
+    margin-right: 10px;
+}
+
+.produit p {
+    font-family: 'Lato', sans-serif;
+}
+
+.produit em {
+     font-family: 'Lato', sans-serif;
+ }
+
+.produit a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.menu {
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
@@ -19,12 +99,18 @@
 }
 
 .cart {
-    border: 2px solid black;
-    padding: 10px;
+    padding: 15px;
+    background-color: dimgray;
 }
 
 .cart h3 {
     margin: 0;
+    padding-top: 10px;
+    color: white;
+}
+
+main {
+    margin-top: 20px;
 }
 
 footer > p {
