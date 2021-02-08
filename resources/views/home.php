@@ -1,5 +1,11 @@
 <?php require 'resources/views/layouts/header.php' ?>
     <main>
+        <section class="intro">
+            <h1>Les meilleurs livres pour les développeurs</h1>
+            <p>Vous trouverez ici de nombreuses références de livres pour les développeurs.<br>
+            Des livres dédiés aux différents systèmes d'exploitation, aux langages de programmation, aux logiciels de développement.</p>
+        </section>
+        <h2 class="soustitre">Nos livres informatique</h2>
         <section class="content">
             <?php foreach ($products as $product): ?>
                 <article class="produit">

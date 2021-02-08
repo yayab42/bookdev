@@ -1,6 +1,7 @@
 <?php require 'resources/views/layouts/header.php' ?>
     <main>
-        <article>
+        <div class="produitseul">
+        <article class="oneproduct">
             <header>
                 <h3><?= $product['title'] ?></h3>
             </header>
@@ -11,7 +12,7 @@
             </footer>
         </article>
 
-        <form action="/index.php?action=cart" method="POST">
+        <form class="formproduct" action="/index.php?action=cart" method="POST">
             <div>
                 <input type="hidden" name="id" value="<?= $product['id'] ?>">
             </div>
@@ -21,8 +22,9 @@
             </div>
 
             <div>
-                <button type="submit">Ajouter au panier</button>
+                <button id="addcart" type="submit">Ajouter au panier</button>
             </div>
         </form>
+        </div>
     </main>
 <?php require 'resources/views/layouts/footer.php' ?>
