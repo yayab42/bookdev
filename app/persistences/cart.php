@@ -45,7 +45,3 @@ function updateProductCart(array $datas): array
     }
     return $_SESSION['cart'];
 }
-function deleteProductCart($id)
-{
-    unset($_SESSION['cart'][$id]);
-}

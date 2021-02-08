@@ -27,6 +27,7 @@
                     <td>
                         <input name="<?= $id ?>" type="number"
                                value="<?= $quantities[$id] ?>" min="0"/>
+                        <a class="button" href="/?action=cart&delete=<?=$id?>">X</a>
                     </td>
                     <td><?= number_format($price_row_ttc * $quantities[$id], 2, '.', ' ') ?> €</td>
                 </tr>
