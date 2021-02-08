@@ -45,3 +45,4 @@ function updateProductCart(array $datas): array
     }
     return $_SESSION['cart'];
 }
+
