@@ -20,6 +20,13 @@ if (filter_has_var(INPUT_POST, 'upload')) {
     $cart = updateProductCart($datas);
 }
 
+// Suppression d'un produit
+if (filter_has_var(INPUT_GET, 'delete')) {
+    $delete_product = filter_input(INPUT_GET, 'delete', FILTER_SANITIZE_NUMBER_INT);
+    deleteProductCart($delete_product);
+
+}
+
 if (!empty($_SESSION['cart'])) {
 // Populer les tableaux pour la vue et le calcul des prix avec les produits et quantités
     foreach ($cart as $id => $quantity) {
